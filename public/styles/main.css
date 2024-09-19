@@ -1,0 +1,122 @@
+/* General Reset */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.drinkname {
+    color: black;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: url('summer.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #0d0082;
+    text-align: center;
+}
+
+.header {
+    padding: 20px;
+    background: linear-gradient(45deg,  rgba(45, 239, 253, 0.923), rgba(34, 90, 195, 0.907)); /* Slightly dark background for text readability */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.main {
+    margin-top: 130px;
+    padding: 20px;
+    background: rgba(30, 188, 62, 0.759); /* Slightly dark background for form readability */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+form {
+    margin: 0;
+}
+
+label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+/* Buttons */
+button {
+    background: linear-gradient(45deg, rgba(34, 90, 195, 1), rgb(253, 45, 243));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    z-index: 1;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+    transform: scale(0);
+    z-index: 0;
+}
+
+button:hover::before {
+    transform: scale(1);
+}
+
+button:hover {
+    background: linear-gradient(45deg, rgb(172, 53, 179), rgb(255, 255, 255));
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(251, 252, 255, 0.6); /* Added glowing effect on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Glowing effect when button is clicked */
+button:active {
+    box-shadow: 0 0 20px rgba(253, 45, 243, 0.9), 0 0 40px rgba(34, 90, 195, 0.8); /* Glowing effect on click */
+    transform: scale(1.02); /* Slight scale effect when clicking */
+}
+
+
+/* Image container styling */
+.image-container {
+    display: inline-block;
+    position: relative;
+    border-radius: 10px; /* Rounded corners for the gradient */
+    padding: 5px; /* Space between the image and the gradient */
+    background: linear-gradient(45deg, rgb(86, 139, 237), rgb(249, 120, 243)); /* Gradient around the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img {
+    border-radius: 10px; /* Match the rounded corners of the container */
+    display: block;
+    width: 100%; /* Ensure the image fits within the container */
+    transition: box-shadow 0.3s ease; /* Smooth transition for glow */
+}
+
+.image-container:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Shadow effect for a more defined hover */
+}
+
+.image-container img:hover {
+    box-shadow: 0 20px 10px rgba(110, 161, 255, 0.8), 0 0 30px 15px rgba(255, 171, 251, 0.5); /* Glow effect on image hover */
+}
